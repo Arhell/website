@@ -10,16 +10,25 @@
 
 // 1. Среди трех чисел найти среднее арифметическое. Если среди чисел есть равные, вывести сообщение "Ошибка". Числа принять от пользователя.
 
-	var countFirst = +prompt('Ведите произвольное число');
-	var countSecont = +prompt('Ведите произвольное число');
-	var countThird = +prompt('Ведите произвольное число');
-	var countAll = (countFirst + countSecont+ countThird) / 3;
-	
-	if (countFirst == countSecont || countSecont == countThird || countThird == countFirst) {
-		alert('Ошибка');
-	} else (document.write('Среднее арифметическое = ' + countAll))
+	// var countFirst = +prompt('Ведите произвольное число');
+	// var countSecont = +prompt('Ведите произвольное число');
+	// var countThird = +prompt('Ведите произвольное число');
+	// var countAll = (countFirst + countSecont+ countThird) / 3;
+	//
+	// if (countFirst == countSecont || countSecont == countThird || countThird == countFirst) {
+	// 	alert('Ошибка');
+	// } else (document.write('Среднее арифметическое = ' + countAll))
 
 // 2. Построить прямоугольный треугольник состоящий из символа "*".
+
+	for (var i = 0; i < 10; i++) {
+
+		for (var j = 0; j < 10 - i; j++) {
+			document.write("* ");
+		}
+
+		document.write("<br/>");
+	}
 
 // 3. Определить какое из трех, введенных пользователем, чисел максимальное и вывести его на экран.
 
