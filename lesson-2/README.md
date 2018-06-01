@@ -1,6 +1,6 @@
 ## Lesson-2
 1) Done
 2) Done
-3)
+3) Done
 4)
 5)
