@@ -79,33 +79,33 @@
 // 5. Вывести на экран ряд чисел Фибоначчи, состоящий из n элементов (n принять от пользователя).
 // Числа Фибоначчи – это элементы числовой последовательности, в которой каждое последующее число равно сумме двух предыдущих.
 
-	var count = +prompt('Введите число, не больше 100');
-	var max = 101,
-			a = 0,
-			b = 1,
-			c;
-
-	if (count >= max) {
-		document.write('Вы ввели слишком большое число');
-	}
-
-	else if (count < max && count != 0) {
-		document.write(a + ", ");
-		document.write(b + ", ");
-
-		for(i = 3; i <= count; i++)
-		{
-			c = a + b;
-			a = b;
-			b = c;
-
-			document.write(c + ", ");
-		}
-	}
-
-	else if (count == 0){
-		document.write('Вы ввели 0');
-	}
+	// var count = +prompt('Введите число, не больше 100');
+	// var max = 101,
+	// 		a = 0,
+	// 		b = 1,
+	// 		c;
+	//
+	// if (count >= max) {
+	// 	document.write('Вы ввели слишком большое число');
+	// }
+	//
+	// else if (count < max && count != 0) {
+	// 	document.write(a + ", ");
+	// 	document.write(b + ", ");
+	//
+	// 	for(i = 3; i <= count; i++)
+	// 	{
+	// 		c = a + b;
+	// 		a = b;
+	// 		b = c;
+	//
+	// 		document.write(c + ", ");
+	// 	}
+	// }
+	//
+	// else if (count == 0){
+	// 	document.write('Вы ввели 0');
+	// }
 
 
 // 6. Вывести на экран таблицу умножения от 0 до 9.
