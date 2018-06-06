@@ -98,7 +98,7 @@
   for (i = 0; i < 10; i++) {
     var num = +prompt('Введите число');
     arr.push(num);
-    var result = arr.sort();
+    var result = arr.sort(function (a, b) { return a - b; });
   }
 
   document.write(result);
