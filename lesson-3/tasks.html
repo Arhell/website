@@ -112,9 +112,12 @@
   if (ask < 0) {
     alert('Вы ввели слишком маленькое число')
   }
+
   else if (ask > 9) {
     alert('Вы ввели слишком большое значение')
-  } else {
+  }
+
+  else {
     var element = +prompt('Введите любое числовое значение');
     arr.splice(ask, 0, element);
     document.write(arr.join());
