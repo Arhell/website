@@ -77,6 +77,35 @@
   // 2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
   // 	Результат должен выводиться в консоль.
 
+  var arr = [23, 345, 23, 4, 6, -24, -1, 25, -23];
+
+  function getMaxValue(arr) {
+    var arrLength = arr.length,
+        maxElement = arr[0];
+    for (var i = 0; i < arrLength; i++) {
+      if (maxElement < arr[i]) {
+        maxElement = arr[i];
+      }
+    }
+    return maxElement;
+  }
+
+  function getMinValue(arr) {
+    var arrLength = arr.length,
+        minElement = arr[0];
+    for (var i = 0; i < arrLength; i++) {
+      if (minElement > arr[i]) {
+        minElement = arr[i];
+      }
+    }
+    return minElement;
+  }
+  var functionMaxElement = getMaxValue(arr);
+  var functionMinElement = getMinValue(arr);
+
+  console.log(functionMaxElement, functionMinElement);
+  document.write('Максимальное значение = ' + functionMaxElement + '<br>' + 'Минимальное значение = ' + functionMinElement)
+
 
   // 3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь.
 
