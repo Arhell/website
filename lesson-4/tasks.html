@@ -13,6 +13,28 @@
   //     Функция должна проверять корректность введенных чисел и знака операции.
   //     Все аргументы для функции принять от пользователя.
 
+  function calculate(operand1, operand2, sign) {
+    var operand1 = +prompt('Введите число');
+    var sign = +prompt('Введите значение * - + /');
+    var operand2 = +prompt('Введите число');
+    var result;
+
+    if (sign == '+') {
+      result = operand1 + operand2;
+    }
+    else if (sign == '-') {
+      result = operand1 - operand2;
+    }
+    else if (sign == '*') {
+      result = operand1 * operand2;
+    }
+    else if (sign == '/') {
+      result = operand1 / operand2;
+    }
+    else {
+      document.write(sign + ' - не является знаком арифметической операции. ')
+    }
+  }
 
   // 2. Создать функцию, возводящую число в степень, число и сама степень вводится пользователем
 
