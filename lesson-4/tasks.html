@@ -14,29 +14,33 @@
   //     Все аргументы для функции принять от пользователя.
 
   function calculate(operand1, operand2, sign) {
-    var operand1 = +prompt('Введите число');
-    var sign = prompt('Введите значение * - + /');
-    var operand2 = +prompt('Введите число');
+    operand1 = +prompt('Введите число');
+    sign = prompt('Введите значение * - + /');
+    operand2 = +prompt('Введите число');
     var result;
 
-    if (sign == '+') {
-      result = calculate(operand1 + operand2);
-      document.write(result);
+    switch (sign) {
+      case "+":
+        result = operand1 + operand2;
+        break;
+
+      case "-":
+        result = operand1 - operand2;
+        break;
+
+      case "*":
+        result = operand1 * operand2;
+        break;
+
+      case "/":
+        result = operand1 / operand2;
+        break;
+
+      default:
+        document.write( sign + ' - не является знаком арифметической операции.');
     }
-    else if (sign == '-') {
-      result = calculate(operand1 - operand2);
-      document.write(result);
-    }
-    else if (sign == '*') {
-      result = calculate(operand1 * operand2);
-      document.write(result);
-    }
-    else if (sign == '/') {
-      result = calculate(operand1 / operand2);
-      document.write(result);
-    }
-    else {
-      document.write(sign + ' - не является знаком арифметической операции. ')
+    if (result != undefined) {
+      document.write("Результат операции: " + result);
     }
   }
 
