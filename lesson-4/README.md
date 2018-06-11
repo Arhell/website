@@ -1,5 +1,5 @@
 ## Lesson-4
-1) 
-2)
+1) Done
+2) Done
 3)
-4)
+4) Done
