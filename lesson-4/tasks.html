@@ -13,38 +13,38 @@
   //     Функция должна проверять корректность введенных чисел и знака операции.
   //     Все аргументы для функции принять от пользователя.
 
-  function calculate(operand1, operand2, sign) {
-    operand1 = +prompt('Введите число');
-    sign = prompt('Введите значение * - + /');
-    operand2 = +prompt('Введите число');
-    var result;
-
-    switch (sign) {
-      case "+":
-        result = operand1 + operand2;
-        break;
-
-      case "-":
-        result = operand1 - operand2;
-        break;
-
-      case "*":
-        result = operand1 * operand2;
-        break;
-
-      case "/":
-        result = operand1 / operand2;
-        break;
-
-      default:
-        document.write( sign + ' - не является знаком арифметической операции.');
-    }
-    if (result != undefined) {
-      document.write("Результат операции: " + result);
-    }
-  }
-
-  calculate();
+  // function calculate(operand1, operand2, sign) {
+  //   operand1 = +prompt('Введите число');
+  //   sign = prompt('Введите значение * - + /');
+  //   operand2 = +prompt('Введите число');
+  //   var result;
+  //
+  //   switch (sign) {
+  //     case "+":
+  //       result = operand1 + operand2;
+  //       break;
+  //
+  //     case "-":
+  //       result = operand1 - operand2;
+  //       break;
+  //
+  //     case "*":
+  //       result = operand1 * operand2;
+  //       break;
+  //
+  //     case "/":
+  //       result = operand1 / operand2;
+  //       break;
+  //
+  //     default:
+  //       document.write( sign + ' - не является знаком арифметической операции.');
+  //   }
+  //   if (result != undefined) {
+  //     document.write("Результат операции: " + result);
+  //   }
+  // }
+  //
+  // calculate();
 
 
 
