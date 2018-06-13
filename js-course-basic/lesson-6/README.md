@@ -1,5 +1,5 @@
 ## Lesson-6
-### Objects
+### DOM
 1) 
 2)
 3)
