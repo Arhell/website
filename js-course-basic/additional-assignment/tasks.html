@@ -17,6 +17,7 @@
   var regexp = /^[А-Яа-яЁё]+$/;
   var message = (ask == +ask) ? 'Вы ввели число' :
       (regexp.test(ask) == true) ? 'Вы ввели кирилицу' :
+      (ask.length > 1) ? 'Вы ввели много букв' :
       'Вы ввели верную букву';
  alert(message);
 
