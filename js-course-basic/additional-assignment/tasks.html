@@ -18,6 +18,7 @@
   var message = (ask == +ask) ? 'Вы ввели число' :
       (regexp.test(ask) == true) ? 'Вы ввели кирилицу' :
       (ask.length > 1) ? 'Вы ввели много букв' :
+      (ask.toUpperCase() == true) ? 'Вы ввели бошьшую букву' :
       'Вы ввели верную букву';
  alert(message);
 
