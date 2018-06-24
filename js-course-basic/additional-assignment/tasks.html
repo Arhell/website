@@ -15,10 +15,12 @@
 
   var ask = prompt('Введите букву латинского алфавита');
   var regexp = /^[А-Яа-яЁё]+$/;
+  var upperCase = ask.toUpperCase();
+  var lowerCase = ask.toLowerCase();
   var message = (ask == +ask) ? 'Вы ввели число' :
       (regexp.test(ask) == true) ? 'Вы ввели кирилицу' :
       (ask.length > 1) ? 'Вы ввели много букв' :
-      (ask.toUpperCase() == true) ? 'Вы ввели бошьшую букву' :
+      (upperCase == ask) ? 'Вы ввели бошьшую букву' :
       'Вы ввели верную букву';
  alert(message);
 
