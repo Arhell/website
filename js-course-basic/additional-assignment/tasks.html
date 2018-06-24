@@ -21,7 +21,7 @@
   var message = (ask == +ask) ? 'Вы ввели число' :
       (regexpCirilic.test(ask) == true) ? 'Вы ввели кирилицу' :
       (ask.length > 1) ? 'Вы ввели много букв' :
-      (upperCase == ask) ? 'Вы ввели бошьшую букву' :
+      (upperCase == ask) ? 'Вы ввели бошьшую латинскую букву' :
       (lowerCase == ask && regexpLatin.test(ask) == ask) ? 'Вы ввели маленькую латинскую букву' :
       'Вы ввели верную букву';
  alert(message);
