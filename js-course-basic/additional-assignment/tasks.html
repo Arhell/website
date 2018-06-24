@@ -14,11 +14,12 @@
   // 3. Если пользователь ввел строку, проверить с какой буквы (большая или маленькая).
 
   var ask = prompt('Введите букву латинского алфавита');
-  var regexp = /^[А-Яа-яЁё]+$/;
+  var regexpCirilic = /^[А-Яа-яЁё]+$/;
+  var regexpLatin = /[a-zA-Z]/;
   var upperCase = ask.toUpperCase();
   var lowerCase = ask.toLowerCase();
   var message = (ask == +ask) ? 'Вы ввели число' :
-      (regexp.test(ask) == true) ? 'Вы ввели кирилицу' :
+      (regexpCirilic.test(ask) == true) ? 'Вы ввели кирилицу' :
       (ask.length > 1) ? 'Вы ввели много букв' :
       (upperCase == ask) ? 'Вы ввели бошьшую букву' :
       (lowerCase == ask) ? 'Вы ввели маленькую букву' :
