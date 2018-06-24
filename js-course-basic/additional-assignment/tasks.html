@@ -23,6 +23,7 @@
       (ask.length > 1) ? 'Вы ввели много букв' :
       (upperCase == ask) ? 'Вы ввели бошьшую латинскую букву' :
       (lowerCase == ask && regexpLatin.test(ask) == true) ? 'Вы ввели маленькую латинскую букву' :
+      (ask == null) ? 'Вы нжали отмена' :
       'Вы ввели верную букву';
  alert(message);
 
