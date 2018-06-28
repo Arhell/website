@@ -33,23 +33,23 @@
   // 2. Ввел ли пользаватель букву латынского алфавита.
   // 3. Если пользователь ввел букву латынского алфавита, проверить большая она или маленькая и если она маленькая, заменить ее на большую и вывести в консоль. Результаты всех проверок выводить в консоль
 
-  var ask = prompt('Введите букву латинского алфавита');
-  var regexpCirilic = /[А-Яа-яЁё]/;
-  var upperCase = ask.toUpperCase();
-  if (regexpCirilic.test(ask)) {
-    console.log('Вы ввели кирилицу')
-  }
-  else if (+ask == ask) {
-    console.log('Вы ввели цыфру, а нужна буква')
-  }
-  else if (regexpCirilic.test(ask) != ask) {
-    if (ask == upperCase) {
-      console.log('Вы ввели большую латинскую букву')
-    }
-    else {
-      console.log(ask.toUpperCase());
-    }
-  }
+  // var ask = prompt('Введите букву латинского алфавита');
+  // var regexpCirilic = /[А-Яа-яЁё]/;
+  // var upperCase = ask.toUpperCase();
+  // if (regexpCirilic.test(ask)) {
+  //   console.log('Вы ввели кирилицу')
+  // }
+  // else if (+ask == ask) {
+  //   console.log('Вы ввели цыфру, а нужна буква')
+  // }
+  // else if (regexpCirilic.test(ask) != ask) {
+  //   if (ask == upperCase) {
+  //     console.log('Вы ввели большую латинскую букву')
+  //   }
+  //   else {
+  //     console.log(ask.toUpperCase());
+  //   }
+  // }
 
 
   // "поменять две  переменные местами используя третью буфферную"? Так вот, сделайте это без буфферной переменной. У нас есть а = 5 и b = 8, нужно поменять их местами
