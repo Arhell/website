@@ -35,6 +35,8 @@
 
   var ask = prompt('Введите букву латинского алфавита');
   var regexpCirilic = /[А-Яа-яЁё]/;
+  var upperCase = ask.toUpperCase();
+  var lowerCase = ask.toLowerCase();
   if (regexpCirilic.test(ask)) {
     alert('Вы ввели кирилицу')
   }
@@ -42,7 +44,7 @@
     alert('Вы ввели цыфру, а нужна буква')
   }
   else if (regexpCirilic.test(ask) != ask) {
-    alert('Вы ввели латинскую букву')
+    if ()
   }
 
 
@@ -58,7 +60,7 @@
   // document.write(a + '<br>');
   // document.write(b);
 
-  
+
 </script>
 
 
