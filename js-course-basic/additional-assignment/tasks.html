@@ -44,7 +44,12 @@
     alert('Вы ввели цыфру, а нужна буква')
   }
   else if (regexpCirilic.test(ask) != ask) {
-    if ()
+    if (ask == upperCase) {
+      alert('Вы ввели большую латинскую букву')
+    }
+    else {
+      console.log(ask.toUpperCase());
+    }
   }
 
 
