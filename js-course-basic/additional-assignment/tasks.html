@@ -13,19 +13,19 @@
   // 2. Ввел ли пользаватель букву латынского алфавита.
   // 3. Если пользователь ввел строку, проверить с какой буквы (большая или маленькая).
 
-  //  var ask = prompt('Введите букву латинского алфавита');
-  //  var regexpCirilic = /^[А-Яа-яЁё]+$/;
-  //  var regexpLatin = /[a-zA-Z]/;
-  //  var upperCase = ask.toUpperCase();
-  //  var lowerCase = ask.toLowerCase();
-  //  var message = (ask == +ask) ? 'Вы ввели число' :
-  //      (regexpCirilic.test(ask) == true) ? 'Вы ввели кирилицу' :
-  //      (ask.length > 1) ? 'Вы ввели много букв' :
-  //      (upperCase == ask) ? 'Вы ввели бошьшую латинскую букву' :
-  //      (lowerCase == ask && regexpLatin.test(ask) == true) ? 'Вы ввели маленькую латинскую букву' :
-  //      (ask === null || ask === '') ? 'Вы нажали - отмена' :
-  //      'Вы ввели верную букву';
-  // alert(message);
+   var ask = prompt('Введите букву латинского алфавита');
+   var regexpCirilic = /^[А-Яа-яЁё]+$/;
+   var regexpLatin = /[a-zA-Z]/;
+   var upperCase = ask.toUpperCase();
+   var lowerCase = ask.toLowerCase();
+   var message = (ask == +ask) ? 'Вы ввели число' :
+       (regexpCirilic.test(ask) == true) ? 'Вы ввели кирилицу' :
+       (ask.length > 1) ? 'Вы ввели много букв' :
+       (upperCase == ask) ? 'Вы ввели бошьшую латинскую букву' :
+       (lowerCase == ask && regexpLatin.test(ask) == true) ? 'Вы ввели маленькую латинскую букву' :
+       (ask === null || ask === '') ? 'Вы нажали - отмена' :
+       'Вы ввели верную букву';
+  alert(message);
 
 
   // "Запросите у пользователя ввести одну букву  латынского алфавита и сделайте следующие проверки:
@@ -63,7 +63,7 @@
   //
   // document.write(a + '<br>');
   // document.write(b);
-  
+
 </script>
 
 </body>
