@@ -31,38 +31,38 @@
   //     Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
   //     В зависимости от принятого знака операции, вызвать соответствующий метод.
 
-  function calculate(operand1, operand2, sign) {
-    operand1 = +prompt('Введите число');
-    sign = prompt('Введите значение * - + /');
-    operand2 = +prompt('Введите число');
-    var result;
-
-    switch (sign) {
-      case "+":
-        result = operand1 + operand2;
-        break;
-
-      case "-":
-        result = operand1 - operand2;
-        break;
-
-      case "*":
-        result = operand1 * operand2;
-        break;
-
-      case "/":
-        result = operand1 / operand2;
-        break;
-
-      default:
-        document.write( sign + ' - не является знаком арифметической операции.');
-    }
-    if (result != undefined) {
-      document.write("Результат операции: " + result);
-    }
-  }
-
-  calculate();
+  // function calculate(operand1, operand2, sign) {
+  //   operand1 = +prompt('Введите число');
+  //   sign = prompt('Введите значение * - + /');
+  //   operand2 = +prompt('Введите число');
+  //   var result;
+  //
+  //   switch (sign) {
+  //     case "+":
+  //       result = operand1 + operand2;
+  //       break;
+  //
+  //     case "-":
+  //       result = operand1 - operand2;
+  //       break;
+  //
+  //     case "*":
+  //       result = operand1 * operand2;
+  //       break;
+  //
+  //     case "/":
+  //       result = operand1 / operand2;
+  //       break;
+  //
+  //     default:
+  //       document.write( sign + ' - не является знаком арифметической операции.');
+  //   }
+  //   if (result != undefined) {
+  //     document.write("Результат операции: " + result);
+  //   }
+  // }
+  //
+  // calculate();
 
 
   // 3.  Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
