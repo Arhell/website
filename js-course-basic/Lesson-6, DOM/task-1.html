@@ -15,12 +15,12 @@
   // параграфе появляется какая то картинка
 
 var idElem = document.getElementById('img');
-var createElementImg = idElem.innerHTML('<img src="http://kyky.org/uploads/post/photo/2479/default_635844198531727087654293112_cat_1-jpg.jpg">');
-var appendImg = idElem.appendChild(createElementImg);
+var createElementImg = document.createElement('img');
+createElementImg.src = "http://kyky.org/uploads/post/photo/2479/default_635844198531727087654293112_cat_1-jpg.jpg";
 
 var btn = document.getElementById('btn');
 btn.onclick = function () {
-  idElem.appendChild(appendImg)
+  idElem.appendChild(createElementImg)
 }
 
 </script>
