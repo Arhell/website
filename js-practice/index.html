@@ -31,16 +31,24 @@
 	<div class="wrapper">
 		<div class="cat-wrapper">
 			<div class="img" id="img">
-
+					dfhd
 			</div>
 			<div class="counter" id="counter">
-
+				Count = 0
 			</div>
 		</div>
 	</div>
 
 <script>
 
+	var catImg = document.getElementById('img'),
+			counterPlace = document.getElementById('counter'),
+			count = 0;
+
+	catImg.onclick = function () {
+		count = count + 1;
+		counterPlace.innerHTML = 'Count = ' + count;
+  }
 
 
 </script>
