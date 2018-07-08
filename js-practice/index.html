@@ -38,6 +38,17 @@
 			color: red;
 			font-size: 18px;
 		}
+		.reset-btn {
+			padding: 4px 10px;
+			display: inline-block;
+			background-color: red;
+			margin: 15px auto 0;
+			color: #fff;
+			cursor: pointer;
+		}
+		.cat-wrapper {
+			text-align: center;
+		}
 
 	</style>
 </head>
@@ -50,8 +61,11 @@
 				<img src="Monya.jpg">
 			</div>
 
-			<div class="counter" id="counter">
-				Count = 0
+			<div class="counter">
+				Count = <span id="span">0</span>
+			</div>
+			<div class="reset-btn" id="reset">
+				reset
 			</div>
 		</div>
 	</div>
@@ -59,12 +73,20 @@
 <script>
 
 	var catImg = document.getElementById('img'),
-			counterPlace = document.getElementById('counter'),
+			countSpan = document.getElementById('span'),
+			resetBrn = document.getElementById('reset'),
 			count = 0;
 
 	catImg.onclick = function () {
 		count += 1;
-		counterPlace.innerHTML = 'Count = ' + count;
+    countSpan.innerHTML = count;
+  }
+
+  resetBrn.onclick = function () {
+		if (count > 1) {
+      count = 0;
+      countSpan.innerHTML = count;
+		}
   }
 
 </script>
