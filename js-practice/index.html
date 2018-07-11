@@ -51,6 +51,14 @@
 		.cat-wrapper {
 			text-align: center;
 		}
+		.cat-wrapper img {
+			border: 3px solid red;
+			display: block;
+		}
+		.cat-wrapper-second img {
+			border: 3px solid green;
+			display: block;
+		}
 		.cat-wrapper-second {
 			display: none;
 		}
@@ -77,8 +85,8 @@
 
 	<div class="wrapper">
 		<div class="wrapper-all">
-			<div class="catName">Cat name: Monya</div>
-			<div class="catName catName-green">Cat name: Monya</div>
+			<div class="catName" id="one">Cat name: Monya</div>
+			<div class="catName catName-green" id="two">Cat name: Monya</div>
 
 			<div class="cat-wrapper" id="tab1">
 			<div class="img" id="img">
@@ -115,7 +123,18 @@
 			resetBrn = document.getElementById('reset'),
 			tabOne = document.getElementById('tab1'),
       tabTwo = document.getElementById('tab2'),
+			one = document.getElementById('one'),
+			two = document.getElementById('two'),
 			count = 0;
+
+ 	one.onclick = function () {
+    tabOne.style.display = 'block'
+    tabTwo.style.display = 'none'
+	}
+  two.onclick = function () {
+    tabTwo.style.display = 'block'
+    tabOne.style.display = 'none'
+  }
 
 	catImg.onclick = function () {
 		count += 1;
