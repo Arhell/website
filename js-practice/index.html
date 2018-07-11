@@ -102,14 +102,14 @@
 		</div>
 
 		<div class="cat-wrapper cat-wrapper-second" id="tab2">
-			<div class="img" id="img">
+			<div class="img" id="img2">
 				<img src="Monya.jpg">
 			</div>
 
 			<div class="counter">
-				Count = <span id="span">0</span>
+				Count = <span id="span2">0</span>
 			</div>
-			<div class="reset-btn" id="reset">
+			<div class="reset-btn" id="reset2">
 				reset
 			</div>
 		</div>
@@ -121,6 +121,9 @@
 	var catImg = document.getElementById('img'),
 			countSpan = document.getElementById('span'),
 			resetBrn = document.getElementById('reset'),
+      catImg2 = document.getElementById('img2'),
+      countSpan2 = document.getElementById('span2'),
+      resetBrn2 = document.getElementById('reset2'),
 			tabOne = document.getElementById('tab1'),
       tabTwo = document.getElementById('tab2'),
 			one = document.getElementById('one'),
@@ -146,6 +149,18 @@
       count = 0;
       countSpan.innerHTML = count;
 		}
+  }
+
+  catImg2.onclick = function () {
+    count += 1;
+    countSpan2.innerHTML = count;
+  }
+
+  resetBrn2.onclick = function () {
+    if (count >= 1) {
+      count = 0;
+      countSpan2.innerHTML = count;
+    }
   }
 
 </script>
