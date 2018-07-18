@@ -159,23 +159,8 @@
 	var catImg = document.getElementById('img'),
 			countSpan = document.getElementById('span'),
 			resetBrn = document.getElementById('reset'),
-      catImg2 = document.getElementById('img2'),
-      countSpan2 = document.getElementById('span2'),
-      resetBrn2 = document.getElementById('reset2'),
-			tabOne = document.getElementById('tab1'),
-      tabTwo = document.getElementById('tab2'),
-			one = document.getElementById('one'),
-			two = document.getElementById('two'),
 			count = 0;
 
- 	one.onclick = function () {
-    tabOne.style.display = 'block'
-    tabTwo.style.display = 'none'
-	}
-  two.onclick = function () {
-    tabTwo.style.display = 'block'
-    tabOne.style.display = 'none'
-  }
 
 	catImg.onclick = function () {
 		count += 1;
@@ -189,17 +174,6 @@
 		}
   }
 
-  catImg2.onclick = function () {
-    count += 1;
-    countSpan2.innerHTML = count;
-  }
-
-  resetBrn2.onclick = function () {
-    if (count >= 1) {
-      count = 0;
-      countSpan2.innerHTML = count;
-    }
-  }
 
 </script>
 
