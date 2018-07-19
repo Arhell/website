@@ -24,13 +24,13 @@
 			width: 100%;
 		}
 
-    .counter {
-      margin-top: 10px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 20px;
-      color: red;
-    }
+		.counter {
+			margin-top: 10px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+			color: red;
+		}
 
 		.catName {
 			display: inline-block;
@@ -81,20 +81,20 @@
 </head>
 <body>
 
-	<div class="wrapper">
-		<div class="wrapper-all">
-			<div class="catName" id="one">Cat name: Monya</div>
-			<div class="catName catName-green" id="two">Cat name: Monya</div>
+<div class="wrapper">
+	<div class="wrapper-all">
+		<div class="catName" id="one">Cat name: Monya</div>
+		<div class="catName catName-green" id="two">Cat name: Monya</div>
 
-      <select id="cats" onChange="valueNew()">
-        <option selected>Monya</option>
-        <option>boris</option>
-        <option>cat</option>
-        <option>nice</option>
-        <option>red</option>
-      </select>
+		<select id="cats" onChange="valueNew()">
+			<option selected>Monya</option>
+			<option>boris</option>
+			<option>cat</option>
+			<option>nice</option>
+			<option>red</option>
+		</select>
 
-			<div class="cat-wrapper" id="tab1">
+		<div class="cat-wrapper" id="tab">
 			<div class="img" id="img">
 				<img src="Monya.jpg">
 			</div>
@@ -107,8 +107,8 @@
 			</div>
 		</div>
 
-		<div class="cat-wrapper cat-wrapper-second" id="tab2">
-			<div class="img" id="img2">
+		<div class="cat-wrapper cat-wrapper-second" id="tab">
+			<div class="img" id="img">
 				<img src="boris.jpg">
 			</div>
 
@@ -120,66 +120,66 @@
 			</div>
 		</div>
 
-			<div class="cat-wrapper cat-wrapper-second" id="tab2">
-				<div class="img" id="img2">
-					<img src="cat.jpg">
-				</div>
-
-				<div class="counter">
-					Count = <span id="span2">0</span>
-				</div>
-				<div class="reset-btn" id="reset2">
-					reset
-				</div>
+		<div class="cat-wrapper cat-wrapper-second" id="tab">
+			<div class="img" id="img">
+				<img src="cat.jpg">
 			</div>
 
-			<div class="cat-wrapper cat-wrapper-second" id="tab2">
-				<div class="img" id="img2">
-					<img src="nice.jpg">
-				</div>
-
-				<div class="counter">
-					Count = <span id="span2">0</span>
-				</div>
-				<div class="reset-btn" id="reset2">
-					reset
-				</div>
+			<div class="counter">
+				Count = <span id="span2">0</span>
 			</div>
-
-			<div class="cat-wrapper cat-wrapper-second" id="tab2">
-				<div class="img" id="img2">
-					<img src="red.jpg">
-				</div>
-
-				<div class="counter">
-					Count = <span id="span2">0</span>
-				</div>
-				<div class="reset-btn" id="reset2">
-					reset
-				</div>
+			<div class="reset-btn" id="reset2">
+				reset
 			</div>
-
 		</div>
+
+		<div class="cat-wrapper cat-wrapper-second" id="tab">
+			<div class="img" id="img">
+				<img src="nice.jpg">
+			</div>
+
+			<div class="counter">
+				Count = <span id="span2">0</span>
+			</div>
+			<div class="reset-btn" id="reset2">
+				reset
+			</div>
+		</div>
+
+		<div class="cat-wrapper cat-wrapper-second" id="tab">
+			<div class="img" id="img">
+				<img src="red.jpg">
+			</div>
+
+			<div class="counter">
+				Count = <span id="span2">0</span>
+			</div>
+			<div class="reset-btn" id="reset2">
+				reset
+			</div>
+		</div>
+
 	</div>
+</div>
 
 <script>
 
-	var catImg = document.getElementById('img'),
-			countSpan = document.getElementById('span'),
-			resetBrn = document.getElementById('reset'),
-			count = 0;
+  var catImg = document.getElementById('img'),
+      countSpan = document.getElementById('span'),
+      resetBrn = document.getElementById('reset'),
+      count = 0;
 
 
-	catImg.onclick = function () {
-		count += 1;
+  catImg.onclick = function () {
+    count += 1;
     countSpan.innerHTML = count;
   }
 
   resetBrn.onclick = function () {
-		if (count >= 1) {
+    if (count >= 1) {
       count = 0;
       countSpan.innerHTML = count;
-		}
+    }
   }
 
 
