@@ -32,14 +32,6 @@
 			color: red;
 		}
 
-		.catName {
-			display: inline-block;
-			text-align: center;
-			margin: 0 10px 15px;
-			color: red;
-			font-size: 18px;
-			cursor: pointer;
-		}
 		.reset-btn {
 			padding: 4px 10px;
 			display: inline-block;
@@ -69,10 +61,6 @@
 			color: green;
 		}
 
-		.catName-green {
-			color: green;
-		}
-
 		.wrapper-all {
 			text-align: center;
 		}
@@ -83,15 +71,13 @@
 
 <div class="wrapper">
 	<div class="wrapper-all">
-		<div class="catName" id="one">Cat name: Monya</div>
-		<div class="catName catName-green" id="two">Cat name: Monya</div>
 
-		<select id="cats" onChange="valueNew()">
-			<option selected>Monya</option>
-			<option>boris</option>
-			<option>cat</option>
-			<option>nice</option>
-			<option>red</option>
+		<select id="cats" onChange="valueNew(this)">
+			<option value="0">Monya</option>
+			<option value="1">boris</option>
+			<option value="2">cat</option>
+			<option value="3">nice</option>
+			<option value="4">red</option>
 		</select>
 
 		<div class="cat-wrapper" id="tab">
@@ -163,6 +149,19 @@
 </div>
 
 <script>
+
+  var div = document.getElementsByClassName('cat-wrapper');
+  function valueNew(ele) {
+    // iterating over all div and hidding all
+    for (var i = 0; i < div.length; i++) {
+      div[i].style.display = 'none'
+    }
+    // getting div which is need to show using value of selected option
+    div[ele.value].style.display = 'block';
+  }
+
+  // trigger change event to show default div
+  document.getElementById('cats').onchange();
 
   var catImg = document.getElementById('img'),
       countSpan = document.getElementById('span'),
