@@ -152,15 +152,14 @@
 
   var div = document.getElementsByClassName('cat-wrapper');
   function valueNew(ele) {
-    // iterating over all div and hidding all
+
     for (var i = 0; i < div.length; i++) {
       div[i].style.display = 'none'
     }
-    // getting div which is need to show using value of selected option
+
     div[ele.value].style.display = 'block';
   }
-
-  // trigger change event to show default div
+	
   document.getElementById('cats').onchange();
 
   var catImg = document.getElementById('img'),
