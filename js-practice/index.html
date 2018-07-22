@@ -49,20 +49,28 @@
 		.cat-wrapper-second img {
 			display: block;
 		}
-		.cat-wrapper-second {
-			display: none;
-		}
-
-		.cat-wrapper-second .reset-btn {
-			background-color: green;
-		}
-
-		.cat-wrapper-second .counter {
-			color: green;
-		}
 
 		.wrapper-all {
 			text-align: center;
+		}
+
+		.tab {
+			display: inline-block;
+			padding: 5px;
+			cursor: pointer;
+			position: relative;
+		}
+
+		.active {
+			border: 1px solid red;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		.show {
+			display: block;
 		}
 
 	</style>
@@ -70,17 +78,15 @@
 <body>
 
 <div class="wrapper">
-	<div class="wrapper-all">
+	<div class="wrapper-all" id="tabs">
 
-		<select id="cats" onChange="valueNew(this)">
-			<option value="0">Monya</option>
-			<option value="1">boris</option>
-			<option value="2">cat</option>
-			<option value="3">nice</option>
-			<option value="4">red</option>
-		</select>
+		<div class="tab active">Monya</div>
+		<div class="tab">Boris</div>
+		<div class="tab">Pedro</div>
+		<div class="tab">Nice</div>
+		<div class="tab">Red</div>
 
-		<div class="cat-wrapper" id="tab">
+		<div class="cat-wrapper tabContent">
 			<div class="img" id="img">
 				<img src="Monya.jpg">
 			</div>
@@ -93,7 +99,7 @@
 			</div>
 		</div>
 
-		<div class="cat-wrapper cat-wrapper-second" id="tab">
+		<div class="cat-wrapper tabContent">
 			<div class="img" id="img">
 				<img src="boris.jpg">
 			</div>
@@ -106,7 +112,7 @@
 			</div>
 		</div>
 
-		<div class="cat-wrapper cat-wrapper-second" id="tab">
+		<div class="cat-wrapper tabContent">
 			<div class="img" id="img">
 				<img src="pedro.jpg">
 			</div>
@@ -119,7 +125,7 @@
 			</div>
 		</div>
 
-		<div class="cat-wrapper cat-wrapper-second" id="tab">
+		<div class="cat-wrapper tabContent">
 			<div class="img" id="img">
 				<img src="nice.jpg">
 			</div>
@@ -132,7 +138,7 @@
 			</div>
 		</div>
 
-		<div class="cat-wrapper cat-wrapper-second" id="tab">
+		<div class="cat-wrapper tabContent">
 			<div class="img" id="img">
 				<img src="red.jpg">
 			</div>
@@ -150,17 +156,43 @@
 
 <script>
 
-  var div = document.getElementsByClassName('cat-wrapper');
-  function valueNew(ele) {
+  var tab;
+  var tabContent;
 
-    for (var i = 0; i < div.length; i++) {
-      div[i].style.display = 'none'
-    }
-
-    div[ele.value].style.display = 'block';
+  window.onload = function () {
+		tabContent = document.getElementsByClassName('tabContent');
+		tab = document.getElementsByClassName('tab');
+		hideTabContent(1);
   }
 
-  document.getElementById('cats').onchange();
+  function hideTabContent(a) {
+		for (var i = a; i<tabContent.length; i++) {
+		  tabContent[i].classList.remove('show');
+      tabContent[i].classList.add('hide');
+      tab[i].classList.remove('active');
+		}
+  }
+
+  document.getElementById('tabs').onclick = function (event) {
+		var target = event.target;
+		if (target.className == 'tab')  {
+		  for (var i = 0; i < tab.length; i++) {
+				if (target == tab[i]) {
+				  showTabContent(i);
+				  break;
+				}
+			}
+		}
+  }
+
+  function showTabContent(b) {
+		if(tabContent[b].classList.contains('hide')) {
+		  hideTabContent(0);
+      tab[b].classList.add('active');
+      tabContent[b].classList.remove('hide');
+      tabContent[b].classList.add('show');
+		}
+  }
 
   var catImg = document.getElementById('img'),
       countSpan = document.getElementById('span'),
